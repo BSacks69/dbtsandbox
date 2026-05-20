@@ -1,13 +1,18 @@
 sources:
   - name: jaffle_shop
-    database: raw  
-    schema: jaffle_shop  
+    database: raw
+    schema: jaffle_shop
     tables:
-      - name: orders
       - name: customers
+        # no freshness config at all — skip the override entirely
+      - name: orders
+        config:
+          loaded_at_field: _etl_loaded_at
+          freshness:
+            warn_after:
+              count: 6
+              period: hour
+            error_after:
+              count: 12
+              period: hour
 
-  - name: stripe
-    database: raw  
-    schema: stripe 
-    tables:
-      - name: payments
