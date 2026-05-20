@@ -3,4 +3,4 @@ id, orderid, paymentmethod, status,amount, created
 
 
 
- FROM {{ source('stripe', 'payments') }}
+ FROM {{ source('stripe', 'payment') }}
