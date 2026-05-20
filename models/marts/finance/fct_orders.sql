@@ -14,7 +14,7 @@ payment as (
 customer_orders as (
 
     select
-        orderid as order_id,
+        order_id,
 
         sum(amount/100) as total_amount
 
