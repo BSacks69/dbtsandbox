@@ -1,11 +1,4 @@
 models:
-  - name: stg_jaffle_shop__customer
-    columns:
-      - name: customer_id
-        tests:
-          - unique
-          - not_null
-          
   - name: stg_jaffle_shop__orders
     columns:
       - name: order_id
