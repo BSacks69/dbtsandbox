@@ -2,6 +2,7 @@ models:
   - name: stg_jaffle_shop__customer
     columns:
       - name: customer_id
+        description: the primary key
         tests:
           - unique
           - not_null
