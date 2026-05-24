@@ -2,8 +2,10 @@ sources:
   - name: jaffle_shop
     database: raw
     schema: jaffle_shop
+    description: A clone of a Postgres database
     tables:
       - name: customers
+        description: Raw customers data
         columns:
           - name: id        #we did rename it to customer_id but apparently we don't use the alias here?
             description: primary key

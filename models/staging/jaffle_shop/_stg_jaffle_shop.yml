@@ -1,11 +1,13 @@
 models:
   - name: stg_jaffle_shop__orders
+    description: one unique customer per row
     columns:
       - name: order_id
         tests:
           - unique
           - not_null
       - name: status                    #column names
+        description: "{{ doc('order_status') }}"
         tests:
           - accepted_values:
               arguments:
