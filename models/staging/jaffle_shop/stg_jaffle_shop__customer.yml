@@ -1,10 +1,13 @@
 models:
   - name: stg_jaffle_shop__customer
+    description: customer records from jaffle shop used as the standardized staging layer for customer analysis.
     columns:
       - name: customer_id
         description: the primary key
-        tests:
+        data_tests:
           - unique
           - not_null
       - name: first_name
+        description: customer's given name.
       - name: last_name
+        description: customer's family name.
