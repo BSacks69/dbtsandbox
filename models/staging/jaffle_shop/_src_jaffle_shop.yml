@@ -4,8 +4,20 @@ sources:
     schema: jaffle_shop
     tables:
       - name: customers
+        columns:
+          - name: id        #we did rename it to customer_id but apparently we don't use the alias here?
+            description: primary key
+            tests:
+              - unique      #this is the go to test for primary keys
+              - not_null    #this is the go to test for primary keys
         # no freshness config at all — skip the override entirely
       - name: orders
+        columns:
+          - name: id        #we did rename it to customer_id but apparently we don't use the alias here?
+            description: primary key
+            tests:
+              - unique      #this is the go to test for primary keys
+              - not_null    #this is the go to test for primary keys
         config:
           loaded_at_field: _etl_loaded_at
           freshness:
